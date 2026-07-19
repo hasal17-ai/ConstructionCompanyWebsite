@@ -1,3 +1,6 @@
+import image_7bd3f42e_569e_4341_a220_bb6320533e2a_1 from '@/imports/7bd3f42e-569e-4341-a220-bb6320533e2a-1.jpg'
+import image_8c817039_71fc_4e24_90fc_82de0fccac4a from '@/imports/8c817039-71fc-4e24-90fc-82de0fccac4a.jpg'
+import image_7bd3f42e_569e_4341_a220_bb6320533e2a from '@/imports/7bd3f42e-569e-4341-a220-bb6320533e2a.jpg'
 import { ShieldCheck, Trophy, Users, Clock } from "lucide-react";
 import { motion } from "motion/react";
 import { fadeLeft, fadeRight, fadeUp, staggerContainer, cardVariant, viewportConfig } from "./animations";
@@ -5,7 +8,7 @@ import { fadeLeft, fadeRight, fadeUp, staggerContainer, cardVariant, viewportCon
 const pillars = [
   { icon: ShieldCheck, title: "ISO 45001 Safety", desc: "Zero-tolerance safety protocols and certified safety officers on every active site." },
   { icon: Trophy, title: "Award Winning", desc: "Multiple Sri Lanka Construction Industry Best Contractor Award recipient." },
-  { icon: Users, title: "1,200+ Workforce", desc: "Certified engineers, architects, surveyors, and highly skilled tradespeople." },
+  { icon: Users, title: "12+ Workforce", desc: "Certified engineers, architects, surveyors, and highly skilled tradespeople." },
   { icon: Clock, title: "98% On-Time", desc: "Transparent milestone tracking ensuring on-schedule delivery every project." },
 ];
 
@@ -19,15 +22,15 @@ export function About() {
           <motion.div className="relative" variants={fadeLeft} initial="hidden" whileInView="show" viewport={viewportConfig}>
             <div className="grid grid-cols-2 gap-3">
               <motion.img
-                src="https://images.unsplash.com/photo-1644778055925-cf45809c2c17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+                src={image_7bd3f42e_569e_4341_a220_bb6320533e2a}
                 alt="Engineers on site"
-                className="col-span-1 row-span-2 w-full object-cover rounded-sm"
+                className="col-span-1 row-span-2 w-full object-cover rounded-sm m-[0px]"
                 style={{ height: "370px" }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4 }}
               />
               <motion.img
-                src="https://images.unsplash.com/photo-1774600166818-e554a4d4c376?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                src={image_8c817039_71fc_4e24_90fc_82de0fccac4a}
                 alt="Blueprint review"
                 className="w-full object-cover rounded-sm"
                 style={{ height: "178px" }}
@@ -38,7 +41,7 @@ export function About() {
                 viewport={viewportConfig}
               />
               <motion.img
-                src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                src={image_7bd3f42e_569e_4341_a220_bb6320533e2a_1}
                 alt="Construction crane"
                 className="w-full object-cover rounded-sm"
                 style={{ height: "178px" }}
@@ -58,7 +61,7 @@ export function About() {
               transition={{ delay: 0.4, duration: 0.6, type: "spring", stiffness: 200 }}
               whileHover={{ scale: 1.08, rotate: 3 }}
             >
-              <span style={{ fontSize: "2.4rem", fontWeight: 900, lineHeight: 1 }}>20+</span>
+              <span style={{ fontSize: "2.4rem", fontWeight: 900, lineHeight: 1 }}>1+</span>
               <span style={{ fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.14em", lineHeight: 1.5 }}>YEARS OF<br />EXCELLENCE</span>
             </motion.div>
           </motion.div>
@@ -73,7 +76,7 @@ export function About() {
               Sri Lanka's Most Trusted Construction Partner
             </motion.h2>
             <motion.p className="text-gray-600 mb-4" style={{ lineHeight: 1.9, fontSize: "0.93rem" }} variants={fadeUp}>
-              Founded in 2005, Titan Engineering Pvt Ltd has grown from a small Colombo contracting firm into one of Sri Lanka's premier construction and civil engineering companies, operating islandwide across all nine provinces.
+              Founded in 2026, Titan Engineering Pvt Ltd has grown from a small Colombo contracting firm into one of Sri Lanka's premier construction and civil engineering companies, operating islandwide across all nine provinces.
             </motion.p>
             <motion.p className="text-gray-600 mb-8" style={{ lineHeight: 1.9, fontSize: "0.93rem" }} variants={fadeUp}>
               Our portfolio spans high-rise residential towers, commercial centres, government infrastructure, expressways, bridges, and industrial facilities — every project reflecting our commitment to quality craftsmanship and sustainable building.

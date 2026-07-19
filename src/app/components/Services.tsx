@@ -23,9 +23,9 @@ const services = [
   },
   {
     icon: Wrench,
-    title: "MEP Engineering",
-    desc: "Full mechanical, electrical, and plumbing systems — designed, installed, and commissioned seamlessly across every project type.",
-    tags: ["Electrical systems", "Plumbing", "HVAC", "Fire suppression"],
+    title: "Survey Works",
+    desc: "Precision land and topographic surveys, setting out, and GPS/total station measurements — delivering accurate spatial data for every stage of construction.",
+    tags: ["Land surveying", "Setting out", "Topographic surveys", "GPS/Total station"],
   },
   {
     icon: Leaf,

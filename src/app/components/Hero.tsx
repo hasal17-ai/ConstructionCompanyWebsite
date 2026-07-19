@@ -2,9 +2,9 @@ import { Phone, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "500+", label: "Projects Done" },
-  { value: "1,200+", label: "Skilled Team" },
+  { value: "1+", label: "Years Experience" },
+  { value: "5+", label: "Projects Done" },
+  { value: "12+", label: "Skilled Team" },
   { value: "25+", label: "Districts Served" },
 ];
 
@@ -14,12 +14,20 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920')" }}
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      />
+        className="absolute inset-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="https://uhhjoewirdiqwagr.public.blob.vercel-storage.com/322549_small.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a2d]/96 via-[#0b1a2d]/80 to-[#0b1a2d]/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a2d]/60 via-transparent to-transparent" />
 
@@ -48,7 +56,7 @@ export function Hero() {
             transition={{ delay: 0.7, duration: 0.5 }}
           />
           <span style={{ color: "#0d9488", fontSize: "0.7rem", fontWeight: 700 }} className="uppercase tracking-widest">
-            Est. 2005 · Colombo, Sri Lanka
+            Est. 2026 · Colombo, Sri Lanka
           </span>
         </motion.div>
 
@@ -82,7 +90,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.65 }}
         >
-          Titan Engineering Pvt Ltd delivers world-class construction, civil engineering, and infrastructure solutions across Sri Lanka with 20+ years of proven excellence.
+          Titan Engineering Pvt Ltd delivers world-class construction, civil engineering, and infrastructure solutions across Sri Lanka with 1+ years of proven excellence.
         </motion.p>
 
         {/* CTAs */}
