@@ -111,14 +111,14 @@ export function Hero() {
             VIEW OUR PROJECTS
           </motion.button>
           <motion.a
-            href="tel:+94112345678"
+            href="tel:+94717300011"
             className="flex items-center gap-2 border-2 border-white/30 text-white px-8 py-3.5 rounded-sm"
             style={{ fontWeight: 700, fontSize: "0.82rem" }}
             whileHover={{ borderColor: "#0d9488", color: "#0d9488", scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
             <Phone className="w-4 h-4" />
-            +94 11 234 5678
+            +94 71 730 0011
           </motion.a>
         </motion.div>
 
