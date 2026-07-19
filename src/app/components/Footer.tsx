@@ -7,7 +7,7 @@ const serviceLinks = [
   "Commercial Construction",
   "Civil & Structural Engineering",
   "Infrastructure & Road Works",
-  "MEP Engineering",
+  "Survey Works",
   "Green Building",
   "Renovation & Retrofitting",
 ];
@@ -70,7 +70,7 @@ export function Footer() {
             <h4 className="text-white mb-5" style={{ fontSize: "0.82rem", fontWeight: 800, letterSpacing: "0.08em" }}>OUR SERVICES</h4>
             <ul className="space-y-2.5">
               {serviceLinks.map((s) => (
-                <motion.li key={s} className="flex items-center gap-2 cursor-pointer" style={{ fontSize: "0.78rem" }} whileHover={{ x: 5, color: "#0d9488" }} transition={{ duration: 0.2 }}>
+                <motion.li key={s} className="flex items-center gap-2 cursor-pointer" style={{ fontSize: "0.78rem", color: "#9ca3af" }} whileHover={{ x: 5, color: "#0d9488" }} transition={{ duration: 0.2 }}>
                   <ArrowRight className="w-3 h-3 shrink-0" style={{ color: "#0d6b6a" }} />
                   {s}
                 </motion.li>
@@ -99,15 +99,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#0d6b6a" }} />
-                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>No. 45, Duplication Road,<br />Colombo 03, Sri Lanka</span>
+                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>Ganihigama North,<br />Pepiliyawala, Sri Lanka</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#0d6b6a" }} />
-                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>+94 11 234 5678<br />+94 77 123 4567</span>
+                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>+94 77 643 6383<br />+94 71 730 0011</span>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#0d6b6a" }} />
-                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>info@titanengineering.lk<br />projects@titanengineering.lk</span>
+                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>titanengineering07@gmail.com<br />projects@titanengineering.lk</span>
               </li>
             </ul>
           </motion.div>

@@ -511,8 +511,8 @@ export default function About() {
               </motion.button>
               <motion.a
                 href="tel:+94112345678"
-                className="flex items-center gap-2 border-2 border-white/25 text-white px-8 py-3.5 rounded-sm"
-                style={{ fontWeight: 700, fontSize: "0.82rem" }}
+                className="flex items-center gap-2 border-2 border-white/25 px-8 py-3.5 rounded-sm"
+                style={{ fontWeight: 700, fontSize: "0.82rem", color: "#ffffff" }}
                 whileHover={{ borderColor: "#0d9488", color: "#0d9488", scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >

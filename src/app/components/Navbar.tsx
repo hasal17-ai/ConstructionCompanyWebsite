@@ -91,7 +91,7 @@ export function Navbar() {
                   fontSize: "0.78rem",
                   fontWeight: 600,
                   letterSpacing: "0.08em",
-                  color: isActive ? "#0d9488" : undefined,
+                  color: isActive ? "#0d9488" : "#d1d5db",
                 }}
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}

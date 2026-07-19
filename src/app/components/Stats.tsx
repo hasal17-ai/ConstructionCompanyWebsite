@@ -3,12 +3,12 @@ import { motion, useInView } from "motion/react";
 import { staggerContainer, fadeUp, viewportConfig } from "./animations";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Projects Completed", sub: "Across all 9 provinces" },
-  { value: 48, prefix: "LKR ", suffix: "B+", label: "Total Project Value", sub: "Successfully delivered" },
+  { value: 5, suffix: "+", label: "Projects Completed", sub: "Across all 9 provinces" },
+  { value: 1, prefix: "LKR ", suffix: "M+", label: "Total Project Value", sub: "Successfully delivered" },
   { value: 98, suffix: "%", label: "On-Time Delivery", sub: "Industry-leading rate" },
-  { value: 1200, suffix: "+", label: "Skilled Professionals", sub: "Certified team members" },
-  { value: 0, suffix: "", label: "Major Safety Incidents", sub: "5 consecutive years" },
-  { value: 25, suffix: "+", label: "Government Contracts", sub: "Ministry & RDA projects" },
+  { value: 12, suffix: "+", label: "Skilled Professionals", sub: "Certified team members" },
+  { value: 0, suffix: "", label: "Major Safety Incidents", sub: "1 consecutive years" },
+  { value: 2, suffix: "+", label: "Government Contracts", sub: "Ministry & RDA projects" },
 ];
 
 function Counter({ value, prefix = "", suffix = "" }: { value: number; prefix?: string; suffix?: string }) {

@@ -261,8 +261,8 @@ export default function Services() {
               <motion.button
                 key={s.id}
                 onClick={() => document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth" })}
-                className="border text-gray-300 px-3.5 py-1.5 rounded-sm text-xs font-bold tracking-wide"
-                style={{ borderColor: "rgba(255,255,255,0.15)" }}
+                className="border px-3.5 py-1.5 rounded-sm text-xs font-bold tracking-wide"
+                style={{ borderColor: "rgba(255,255,255,0.15)", color: "#d1d5db" }}
                 whileHover={{ borderColor: "#0d6b6a", color: "#0d9488", background: "rgba(13,107,106,0.12)" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.18 }}
@@ -358,8 +358,8 @@ export default function Services() {
                       {svc.tags.map((tag) => (
                         <motion.span
                           key={tag}
-                          className="px-2.5 py-1 rounded-sm text-gray-600"
-                          style={{ fontSize: "0.7rem", fontWeight: 600, background: isEven ? "#f4f5f7" : "#fff" }}
+                          className="px-2.5 py-1 rounded-sm"
+                          style={{ fontSize: "0.7rem", fontWeight: 600, background: isEven ? "#f4f5f7" : "#fff", color: "#4b5563" }}
                           whileHover={{ background: "#0d6b6a", color: "#fff" }}
                           transition={{ duration: 0.18 }}
                         >
@@ -578,8 +578,8 @@ export default function Services() {
               </motion.button>
               <motion.a
                 href="tel:+94112345678"
-                className="flex items-center gap-2 border-2 border-white/25 text-white px-8 py-3.5 rounded-sm"
-                style={{ fontWeight: 700, fontSize: "0.82rem" }}
+                className="flex items-center gap-2 border-2 border-white/25 px-8 py-3.5 rounded-sm"
+                style={{ fontWeight: 700, fontSize: "0.82rem", color: "#ffffff" }}
                 whileHover={{ borderColor: "#0d9488", color: "#0d9488", scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >

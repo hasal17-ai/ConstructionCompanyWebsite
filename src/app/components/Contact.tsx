@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "motion/react";
 import { fadeUp, fadeRight, staggerContainer, cardVariant, viewportConfig } from "./animations";
 
 const info = [
-  { icon: MapPin, label: "Head Office", value: "No. 45, Duplication Road,\nColombo 03, Sri Lanka" },
-  { icon: Phone, label: "Phone", value: "+94 11 234 5678\n+94 77 123 4567" },
-  { icon: Mail, label: "Email", value: "info@titanengineering.lk\nprojects@titanengineering.lk" },
+  { icon: MapPin, label: "Head Office", value: "Ganihigama North,\nPepiliyawala, Sri Lanka" },
+  { icon: Phone, label: "Phone", value: "+94 77 643 6383\n+94 71 730 0011" },
+  { icon: Mail, label: "Email", value: "titanengineering07@gmail.com\nprojects@titanengineering.lk" },
   { icon: Clock, label: "Office Hours", value: "Mon – Fri: 8:00 AM – 6:00 PM\nSat: 8:00 AM – 1:00 PM" },
 ];
 

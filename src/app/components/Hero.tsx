@@ -146,8 +146,8 @@ export function Hero() {
       {/* Scroll cue */}
       <motion.button
         onClick={() => goto("#about")}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 transition-colors"
-        style={{}}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 transition-colors"
+        style={{ color: "rgba(255,255,255,0.4)" }}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
         whileHover={{ color: "#0d9488" }}
