@@ -1,69 +1,14 @@
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router";
+import { ArrowUpRight, Layers, Box } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { fadeUp, staggerContainer, viewportConfig } from "./animations";
-
-const categories = ["All", "Commercial", "Infrastructure", "Residential", "Industrial"];
-
-const projects = [
-  {
-    title: "Colombo Port City Tower",
-    category: "Commercial",
-    location: "Colombo 01",
-    year: "2024",
-    value: "LKR 4.8B",
-    desc: "40-storey Grade-A office tower with luxury retail podium, sky lobby, and helipad.",
-    image: "https://images.unsplash.com/photo-1742276996766-392f323c2eed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-  },
-  {
-    title: "Southern Expressway Extension",
-    category: "Infrastructure",
-    location: "Hambantota – Matara",
-    year: "2022",
-    value: "LKR 12.3B",
-    desc: "48 km expressway with 6 interchanges, 3 major bridges, full drainage infrastructure.",
-    image: "https://images.unsplash.com/photo-1496055401924-5e7fdc885742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-  },
-  {
-    title: "Kandy Hill Luxury Villas",
-    category: "Residential",
-    location: "Kandy, Central Province",
-    year: "2023",
-    value: "LKR 2.1B",
-    desc: "Gated community of 120 luxury villas with panoramic views across the Kandy hills.",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-  },
-  {
-    title: "Katunayake Industrial Park",
-    category: "Industrial",
-    location: "Katunayake, Western Province",
-    year: "2022",
-    value: "LKR 3.6B",
-    desc: "15-acre industrial campus with warehousing, logistics hub, and administration blocks.",
-    image: "https://images.unsplash.com/photo-1644221150167-fb4fafa7f411?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-  },
-  {
-    title: "Colombo Skyline Twin Towers",
-    category: "Commercial",
-    location: "Colombo 03",
-    year: "2023",
-    value: "LKR 8.9B",
-    desc: "Twin 32-floor mixed-use towers housing premium office, retail, and hotel floors.",
-    image: "https://images.unsplash.com/photo-1742276792267-7c9595e38967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-  },
-  {
-    title: "Northern Highway Connector",
-    category: "Infrastructure",
-    location: "Vavuniya – Jaffna",
-    year: "2021",
-    value: "LKR 16.5B",
-    desc: "85 km strategic highway reconnecting the Northern Province to central Sri Lanka.",
-    image: "https://images.unsplash.com/photo-1532201633958-497feb474315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-  },
-];
+import { projects, categories } from "./projectsData";
+import { FloorPlan } from "./FloorPlan";
 
 export function Projects() {
   const [filter, setFilter] = useState("All");
+  const [viewMode, setViewMode] = useState<"3D" | "2D">("3D");
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
@@ -80,25 +25,41 @@ export function Projects() {
           </motion.h2>
         </motion.div>
 
-        {/* Filter tabs */}
-        <motion.div className="flex flex-wrap justify-center gap-2 mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportConfig} transition={{ duration: 0.5 }}>
-          {categories.map((cat, i) => (
-            <motion.button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className="px-5 py-2 rounded-sm transition-colors duration-200"
-              style={filter === cat ? { background: "#0d6b6a", color: "#fff" } : { background: "#f1f2f4", color: "#6b7280" }}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={viewportConfig}
-              transition={{ delay: i * 0.07 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              {...{ style: filter === cat ? { background: "#0d6b6a", color: "#fff", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.07em" } : { background: "#f1f2f4", color: "#6b7280", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.07em" } }}
+        {/* Controls: Filter & View Mode */}
+        <motion.div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewportConfig} transition={{ duration: 0.5 }}>
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((cat, i) => (
+              <motion.button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className="px-5 py-2 rounded-sm transition-colors duration-200"
+                style={filter === cat ? { background: "#0d6b6a", color: "#fff", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.07em" } : { background: "#f1f2f4", color: "#6b7280", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.07em" }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {cat.toUpperCase()}
+              </motion.button>
+            ))}
+          </div>
+
+          <div className="flex bg-[#f1f2f4] p-1 rounded-sm">
+            <button
+              onClick={() => setViewMode("3D")}
+              className="flex items-center gap-2 px-4 py-2 rounded-sm transition-all duration-200"
+              style={viewMode === "3D" ? { background: "#fff", color: "#0b1a2d", boxShadow: "0 1px 3px rgba(0,0,0,0.1)", fontSize: "0.75rem", fontWeight: 700 } : { color: "#6b7280", fontSize: "0.75rem", fontWeight: 600 }}
             >
-              {cat.toUpperCase()}
-            </motion.button>
-          ))}
+              <Box className="w-4 h-4" />
+              3D RENDER
+            </button>
+            <button
+              onClick={() => setViewMode("2D")}
+              className="flex items-center gap-2 px-4 py-2 rounded-sm transition-all duration-200"
+              style={viewMode === "2D" ? { background: "#fff", color: "#0b1a2d", boxShadow: "0 1px 3px rgba(0,0,0,0.1)", fontSize: "0.75rem", fontWeight: 700 } : { color: "#6b7280", fontSize: "0.75rem", fontWeight: 600 }}
+            >
+              <Layers className="w-4 h-4" />
+              2D PLAN
+            </button>
+          </div>
         </motion.div>
 
         {/* Grid */}
@@ -106,7 +67,7 @@ export function Projects() {
           <AnimatePresence mode="popLayout">
             {filtered.map((p) => (
               <motion.div
-                key={p.title}
+                key={p.slug}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -115,28 +76,56 @@ export function Projects() {
                 className="group relative overflow-hidden rounded-sm cursor-pointer"
                 whileHover={{ y: -4 }}
               >
-                <motion.img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full object-cover"
-                  style={{ height: "265px" }}
-                  whileHover={{ scale: 1.07 }}
-                  transition={{ duration: 0.5 }}
+                <Link to={`/projects/${p.slug}`} className="absolute inset-0 z-20" aria-label={`View ${p.title}`} />
+                <div className="relative w-full overflow-hidden" style={{ height: "265px", backgroundColor: "#e2e8f0" }}>
+                  <AnimatePresence mode="wait">
+                    {viewMode === "2D" ? (
+                      <motion.div
+                        key={`${p.slug}-2D`}
+                        className="absolute inset-0 bg-white"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        {p.plan2DImage ? (
+                          <img src={p.plan2DImage} alt={`${p.title} floor plan`} className="w-full h-full object-contain" />
+                        ) : (
+                          <FloorPlan rooms={p.rooms} title={p.planTitle} className="w-full h-full" />
+                        )}
+                      </motion.div>
+                    ) : (
+                      <motion.img
+                        key={`${p.slug}-3D`}
+                        src={p.image3D}
+                        alt={p.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.4 }}
+                        whileHover={{ scale: 1.07 }}
+                      />
+                    )}
+                  </AnimatePresence>
+                </div>
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-[#0b1a2d]/95 via-[#0b1a2d]/40 to-transparent pointer-events-none"
+                  style={{ opacity: viewMode === "2D" ? 0.75 : 1 }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a2d]/95 via-[#0b1a2d]/40 to-transparent" />
 
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 pointer-events-none">
                   <span className="text-white px-2.5 py-0.5 rounded-sm" style={{ background: "#0d6b6a", fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.1em" }}>
                     {p.category.toUpperCase()}
                   </span>
                 </div>
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-4 pointer-events-none">
                   <span className="bg-white/10 backdrop-blur-sm text-white px-2.5 py-0.5 rounded-sm" style={{ fontSize: "0.62rem", fontWeight: 700 }}>
                     {p.value}
                   </span>
                 </div>
 
-                <div className="absolute bottom-0 inset-x-0 p-5">
+                <div className="absolute bottom-0 inset-x-0 p-5 pointer-events-none">
                   <p className="text-gray-400 mb-1" style={{ fontSize: "0.7rem" }}>{p.location} · {p.year}</p>
                   <h3 className="text-white mb-2" style={{ fontWeight: 800, fontSize: "0.97rem" }}>{p.title}</h3>
                   <p className="text-gray-300 overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-20" style={{ fontSize: "0.78rem", lineHeight: 1.65 }}>
