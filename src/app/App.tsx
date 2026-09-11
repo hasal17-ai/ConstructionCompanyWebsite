@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RouterProvider } from "react-router";
 import { useScroll, useSpring, motion, AnimatePresence } from "motion/react";
 import { Preloader } from "./components/Preloader";
@@ -21,6 +21,14 @@ function SiteWrapper() {
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "google-site-verification";
+    meta.content = "349W0KWzdtysGQ0iOCHxt3E22d1Hjb1Ui_WPC2UQPIY";
+    document.head.appendChild(meta);
+    return () => { document.head.removeChild(meta); };
+  }, []);
 
   return (
     <>
