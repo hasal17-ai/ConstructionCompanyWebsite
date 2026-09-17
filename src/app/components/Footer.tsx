@@ -1,6 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Linkedin, Youtube, Instagram, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-import { useNavigate } from "react-router";
 import { staggerContainer, cardVariant, viewportConfig } from "./animations";
 import logoImg from "../../imports/Red_Black_boxes_Logo_Design_Business_Identity_for_Real_Estate_House_Rent_Sale__2_.png";
 
@@ -16,11 +15,11 @@ const serviceLinks = [
 ];
 
 const quickLinks = [
-  { label: "About Us", to: "/about" },
-  { label: "Our Services", to: "/services" },
-  { label: "Projects", to: "/projects" },
-  { label: "Our Team", to: "/team" },
-  { label: "Contact Us", to: "/contact" },
+  { label: "About Us", href: "#about" },
+  { label: "Our Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Leadership Team", href: "#team" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 const socials = [
@@ -31,7 +30,7 @@ const socials = [
 ];
 
 export function Footer() {
-  const navigate = useNavigate();
+  const goto = (href: string) => document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <footer className="bg-[#070f1c] text-gray-500">
@@ -87,7 +86,7 @@ export function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <motion.button onClick={() => navigate(link.to)} className="flex items-center gap-2" style={{ fontSize: "0.78rem" }} whileHover={{ x: 5, color: "#0d9488" }} transition={{ duration: 0.2 }}>
+                  <motion.button onClick={() => goto(link.href)} className="flex items-center gap-2" style={{ fontSize: "0.78rem" }} whileHover={{ x: 5, color: "#0d9488" }} transition={{ duration: 0.2 }}>
                     <ArrowRight className="w-3 h-3 shrink-0" style={{ color: "#0d6b6a" }} />
                     {link.label}
                   </motion.button>
