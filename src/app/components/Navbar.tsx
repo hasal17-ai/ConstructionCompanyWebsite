@@ -8,9 +8,9 @@ const links = [
   { label: "Home", href: "#home", route: "/" },
   { label: "About", href: "/about", route: "/about" },
   { label: "Services", href: "/services", route: "/services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/projects", route: "/projects" },
+  { label: "Team", href: "/team", route: "/team" },
+  { label: "Contact", href: "/contact", route: "/contact" },
 ];
 
 export function Navbar() {
@@ -46,6 +46,9 @@ export function Navbar() {
 
   const isAboutActive = location.pathname === "/about";
   const isServicesActive = location.pathname === "/services";
+  const isProjectsActive = location.pathname === "/projects" || location.pathname.startsWith("/projects/");
+  const isTeamActive = location.pathname === "/team";
+  const isContactActive = location.pathname === "/contact";
 
   return (
     <motion.header
@@ -81,7 +84,7 @@ export function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7">
           {links.map((l, i) => {
-            const isActive = (l.href === "/about" && isAboutActive) || (l.href === "/services" && isServicesActive);
+            const isActive = (l.href === "/about" && isAboutActive) || (l.href === "/services" && isServicesActive) || (l.href === "/projects" && isProjectsActive) || (l.href === "/team" && isTeamActive) || (l.href === "/contact" && isContactActive);
             return (
               <motion.button
                 key={l.label}
@@ -112,7 +115,7 @@ export function Navbar() {
             );
           })}
           <motion.button
-            onClick={() => handleNav({ label: "Contact", href: "#contact" })}
+            onClick={() => { setOpen(false); navigate("/contact"); }}
             className="text-white px-5 py-2 rounded-sm transition-colors"
             style={{ fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.1em", backgroundColor: "#0d6b6a" }}
             initial={{ opacity: 0, scale: 0.85 }}
@@ -169,13 +172,13 @@ export function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06 }}
               >
-                <span className={(l.href === "/about" && isAboutActive) || (l.href === "/services" && isServicesActive) ? "text-[#0d9488]" : "text-gray-300"}>
+                <span className={(l.href === "/about" && isAboutActive) || (l.href === "/services" && isServicesActive) || (l.href === "/projects" && isProjectsActive) || (l.href === "/team" && isTeamActive) || (l.href === "/contact" && isContactActive) ? "text-[#0d9488]" : "text-gray-300"}>
                   {l.label}
                 </span>
               </motion.button>
             ))}
             <motion.button
-              onClick={() => handleNav({ label: "Contact", href: "#contact" })}
+              onClick={() => { setOpen(false); navigate("/contact"); }}
               className="mt-4 w-full text-white py-3 rounded-sm"
               style={{ fontWeight: 800, fontSize: "0.85rem", backgroundColor: "#0d6b6a" }}
               initial={{ opacity: 0 }}

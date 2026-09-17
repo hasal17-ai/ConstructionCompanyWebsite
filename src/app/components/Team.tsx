@@ -4,28 +4,22 @@ import { fadeUp, staggerContainer, cardVariant, viewportConfig } from "./animati
 
 const team = [
   {
-    name: "Arjuna Perera",
-    role: "Managing Director & CEO",
-    qual: "BSc Civil Eng (Moratuwa) · MBA (PIM Colombo) · 25 yrs exp",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+    name: "Lasantha",
+    role: "Head – Surveyor",
+    qual: "Site assessment · Project coordination · Client consultation",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
   },
   {
-    name: "Nimalka Jayawardena",
-    role: "Chief Structural Engineer",
-    qual: "BEng (Hons) Moratuwa · CEng MICE · 18 yrs experience",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+    name: "Pradeep Lakmal",
+    role: "Civil Engineer",
+    qual: "Structural & engineering requirements · Construction practicality",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
   },
   {
-    name: "Chaminda Rathnayake",
-    role: "Director – Infrastructure",
-    qual: "MSc Infrastructure Eng · MIESL · 22 yrs experience",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-  },
-  {
-    name: "Sanduni Fernando",
-    role: "Head of Sustainability",
-    qual: "LEED AP BD+C · MSc Environmental Eng · 14 yrs exp",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+    name: "Hasal",
+    role: "Technical Support",
+    qual: "H.N.D. · Digital planning · Spatial & technical information",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
   },
 ];
 
@@ -43,11 +37,11 @@ export function Team() {
             The Minds Behind Titan Engineering
           </motion.h2>
           <motion.p className="text-gray-500 max-w-xl mx-auto mt-4" style={{ lineHeight: 1.85, fontSize: "0.92rem" }} variants={fadeUp}>
-            Our leaders bring decades of engineering expertise and deep knowledge of Sri Lanka's construction landscape.
+            A dedicated team of engineering and technical professionals committed to delivering quality solutions for every client.
           </motion.p>
         </motion.div>
 
-        <motion.div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={staggerContainer(0.12, 0.1)} initial="hidden" whileInView="show" viewport={viewportConfig}>
+        <motion.div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto" variants={staggerContainer(0.12, 0.1)} initial="hidden" whileInView="show" viewport={viewportConfig}>
           {team.map((m) => (
             <motion.div key={m.name} className="bg-white rounded-sm overflow-hidden" variants={cardVariant} whileHover={{ y: -8, boxShadow: "0 25px 50px rgba(0,0,0,0.12)" }} transition={{ duration: 0.3 }}>
               <div className="relative overflow-hidden" style={{ height: "260px" }}>

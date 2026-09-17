@@ -1,23 +1,26 @@
 import { MapPin, Phone, Mail, Facebook, Linkedin, Youtube, Instagram, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router";
 import { staggerContainer, cardVariant, viewportConfig } from "./animations";
 import logoImg from "../../imports/Red_Black_boxes_Logo_Design_Business_Identity_for_Real_Estate_House_Rent_Sale__2_.png";
 
 const serviceLinks = [
-  "Commercial Construction",
-  "Civil & Structural Engineering",
-  "Infrastructure & Road Works",
-  "Survey Works",
-  "Green Building",
-  "Renovation & Retrofitting",
+  "Architectural House Plans",
+  "3D Exterior & Interior Design",
+  "Engineering Drawings",
+  "Electrical & Plumbing Layouts",
+  "Structural Drawings",
+  "BOQ & Detailed Estimates",
+  "Bank Loan Documentation",
+  "3D Walkthrough & Visualization",
 ];
 
 const quickLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Our Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Leadership Team", href: "#team" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "About Us", to: "/about" },
+  { label: "Our Services", to: "/services" },
+  { label: "Projects", to: "/projects" },
+  { label: "Our Team", to: "/team" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
 const socials = [
@@ -28,7 +31,7 @@ const socials = [
 ];
 
 export function Footer() {
-  const goto = (href: string) => document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
 
   return (
     <footer className="bg-[#070f1c] text-gray-500">
@@ -47,12 +50,12 @@ export function Footer() {
               </div>
             </div>
             <p style={{ fontSize: "0.8rem", lineHeight: 1.85 }}>
-              Sri Lanka's most trusted construction and civil engineering company. Building quality structures across the island since 2005.
+              Professional engineering and construction consultancy providing reliable, innovative, and practical solutions for modern residential projects across Sri Lanka.
             </p>
             <div className="flex gap-2 mt-5 flex-wrap">
-              {["ISO 9001", "ISO 45001", "ICTAD A1"].map((cert) => (
-                <motion.span key={cert} className="border text-gray-400 px-2 py-0.5 rounded-sm" style={{ fontSize: "0.62rem", fontWeight: 700, borderColor: "rgba(255,255,255,0.1)" }} whileHover={{ borderColor: "#0d6b6a", color: "#0d9488" }} transition={{ duration: 0.2 }}>
-                  {cert}
+              {["Est. 2026", "Sri Lanka", "Residential"].map((tag) => (
+                <motion.span key={tag} className="border text-gray-400 px-2 py-0.5 rounded-sm" style={{ fontSize: "0.62rem", fontWeight: 700, borderColor: "rgba(255,255,255,0.1)" }} whileHover={{ borderColor: "#0d6b6a", color: "#0d9488" }} transition={{ duration: 0.2 }}>
+                  {tag}
                 </motion.span>
               ))}
             </div>
@@ -84,7 +87,7 @@ export function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <motion.button onClick={() => goto(link.href)} className="flex items-center gap-2" style={{ fontSize: "0.78rem" }} whileHover={{ x: 5, color: "#0d9488" }} transition={{ duration: 0.2 }}>
+                  <motion.button onClick={() => navigate(link.to)} className="flex items-center gap-2" style={{ fontSize: "0.78rem" }} whileHover={{ x: 5, color: "#0d9488" }} transition={{ duration: 0.2 }}>
                     <ArrowRight className="w-3 h-3 shrink-0" style={{ color: "#0d6b6a" }} />
                     {link.label}
                   </motion.button>
@@ -103,7 +106,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#0d6b6a" }} />
-                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>+94 77 643 6383<br />+94 71 730 0011</span>
+                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>+94 71 730 0011</span>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#0d6b6a" }} />

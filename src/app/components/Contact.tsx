@@ -5,7 +5,7 @@ import { fadeUp, fadeRight, staggerContainer, cardVariant, viewportConfig } from
 
 const info = [
   { icon: MapPin, label: "Head Office", value: "Ganihigama North,\nPepiliyawala, Sri Lanka" },
-  { icon: Phone, label: "Phone", value: "+94 77 643 6383\n+94 71 730 0011" },
+  { icon: Phone, label: "Phone", value: "+94 71 730 0011" },
   { icon: Mail, label: "Email", value: "titanengineering07@gmail.com\nprojects@titanengineering.lk" },
   { icon: Clock, label: "Office Hours", value: "Mon – Fri: 8:00 AM – 6:00 PM\nSat: 8:00 AM – 1:00 PM" },
 ];
@@ -29,7 +29,7 @@ export function Contact() {
             <div className="h-px w-10" style={{ background: "#0d6b6a" }} />
           </motion.div>
           <motion.h2 className="text-[#0b1a2d]" style={{ fontSize: "clamp(1.7rem, 3vw, 2.5rem)", fontWeight: 900, letterSpacing: "-0.02em", lineHeight: 1.12 }} variants={fadeUp}>
-            Let's Build Something Great Together
+            Let's Plan Your Dream Home Together
           </motion.h2>
           <motion.p className="text-gray-500 max-w-lg mx-auto mt-4" style={{ lineHeight: 1.85, fontSize: "0.92rem" }} variants={fadeUp}>
             Request a free consultation and project quote. Our team will get back to you within 24 hours.
@@ -91,13 +91,18 @@ export function Contact() {
                       <label className="block text-[#0b1a2d] mb-1.5" style={{ fontSize: "0.78rem", fontWeight: 700 }}>Service Required</label>
                       <select name="service" value={form.service} onChange={update} className="w-full bg-[#f4f5f7] border border-transparent rounded-sm px-4 py-2.5 text-[#0b1a2d] outline-none transition-colors" style={{ fontSize: "0.875rem" }} onFocus={e => e.target.style.borderColor = "#0d6b6a"} onBlur={e => e.target.style.borderColor = "transparent"}>
                         <option value="">Select a service</option>
-                        <option>Commercial Construction</option>
-                        <option>Residential Construction</option>
-                        <option>Civil & Structural Engineering</option>
-                        <option>Infrastructure & Road Works</option>
-                        <option>MEP Engineering</option>
-                        <option>Green & Sustainable Building</option>
-                        <option>Renovation & Retrofitting</option>
+                        <option>Architectural House Plans</option>
+                        <option>3D Exterior & Interior Design</option>
+                        <option>Engineering Drawings</option>
+                        <option>Electrical & Plumbing Layouts</option>
+                        <option>Structural Drawings</option>
+                        <option>BOQ & Detailed Estimates</option>
+                        <option>Bank Loan Documentation</option>
+                        <option>Local Authority Approval Drawings</option>
+                        <option>Detailed Working Drawings</option>
+                        <option>3D Walkthrough & Visualization</option>
+                        <option>Sustainable Design Consulting</option>
+                        <option>Complete Package (Standard/Premium)</option>
                       </select>
                     </div>
                   </div>

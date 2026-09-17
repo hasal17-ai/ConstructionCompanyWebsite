@@ -1,15 +1,15 @@
 import image_7bd3f42e_569e_4341_a220_bb6320533e2a_1 from '@/imports/7bd3f42e-569e-4341-a220-bb6320533e2a-1.jpg'
 import image_8c817039_71fc_4e24_90fc_82de0fccac4a from '@/imports/8c817039-71fc-4e24-90fc-82de0fccac4a.jpg'
 import image_7bd3f42e_569e_4341_a220_bb6320533e2a from '@/imports/7bd3f42e-569e-4341-a220-bb6320533e2a.jpg'
-import { ShieldCheck, Trophy, Users, Clock } from "lucide-react";
+import { Pencil, Gem, Wallet, HeartHandshake } from "lucide-react";
 import { motion } from "motion/react";
 import { fadeLeft, fadeRight, fadeUp, staggerContainer, cardVariant, viewportConfig } from "./animations";
 
 const pillars = [
-  { icon: ShieldCheck, title: "ISO 45001 Safety", desc: "Zero-tolerance safety protocols and certified safety officers on every active site." },
-  { icon: Trophy, title: "Award Winning", desc: "Multiple Sri Lanka Construction Industry Best Contractor Award recipient." },
-  { icon: Users, title: "12+ Workforce", desc: "Certified engineers, architects, surveyors, and highly skilled tradespeople." },
-  { icon: Clock, title: "98% On-Time", desc: "Transparent milestone tracking ensuring on-schedule delivery every project." },
+  { icon: Pencil, title: "Customized Designs", desc: "Every solution is tailored to your land, lifestyle, budget, and specific construction requirements." },
+  { icon: Gem, title: "Modern & Elegant", desc: "Contemporary architectural styles combined with practical functionality and comfortable living spaces." },
+  { icon: Wallet, title: "Budget-Conscious", desc: "Practical design solutions that balance quality, aesthetics, and cost at every stage of planning." },
+  { icon: HeartHandshake, title: "Client-Focused", desc: "Close communication throughout the planning process to ensure your vision is properly understood." },
 ];
 
 export function About() {
@@ -73,13 +73,13 @@ export function About() {
               <span style={{ color: "#0d6b6a", fontSize: "0.7rem", fontWeight: 700 }} className="uppercase tracking-widest">About Us</span>
             </motion.div>
             <motion.h2 className="text-[#0b1a2d] mb-5" style={{ fontSize: "clamp(1.7rem, 3vw, 2.5rem)", fontWeight: 900, lineHeight: 1.12, letterSpacing: "-0.02em" }} variants={fadeUp}>
-              Sri Lanka's Most Trusted Construction Partner
+              Your Trusted Engineering & Design Partner
             </motion.h2>
             <motion.p className="text-gray-600 mb-4" style={{ lineHeight: 1.9, fontSize: "0.93rem" }} variants={fadeUp}>
-              Founded in 2026, Titan Engineering Pvt Ltd has grown from a small Colombo contracting firm into one of Sri Lanka's premier construction and civil engineering companies, operating islandwide across all nine provinces.
+              Founded in 2026, Titan Engineering is a professional engineering and construction consultancy dedicated to providing reliable, innovative, and practical solutions for modern residential and construction projects across Sri Lanka.
             </motion.p>
             <motion.p className="text-gray-600 mb-8" style={{ lineHeight: 1.9, fontSize: "0.93rem" }} variants={fadeUp}>
-              Our portfolio spans high-rise residential towers, commercial centres, government infrastructure, expressways, bridges, and industrial facilities — every project reflecting our commitment to quality craftsmanship and sustainable building.
+              From initial site consultation and concept development to detailed architectural drawings, 3D visualization, and full technical documentation — we provide a complete range of services to support the successful planning and development of your project.
             </motion.p>
 
             <motion.div className="grid sm:grid-cols-2 gap-5" variants={staggerContainer(0.1, 0.2)} initial="hidden" whileInView="show" viewport={viewportConfig}>

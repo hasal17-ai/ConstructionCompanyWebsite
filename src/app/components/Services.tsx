@@ -1,43 +1,73 @@
-import { Building2, Layers, Truck, Wrench, Leaf, Hammer } from "lucide-react";
+import { HomeIcon, Box, FileText, Zap, Columns3, Calculator, Banknote, Stamp, ClipboardList, Play, Leaf } from "lucide-react";
 import { motion } from "motion/react";
 import { fadeUp, staggerContainer, cardVariant, viewportConfig } from "./animations";
 
 const services = [
   {
-    icon: Building2,
-    title: "Commercial & Residential Construction",
-    desc: "End-to-end construction of high-rise towers, luxury villas, condominiums, shopping complexes, and corporate headquarters.",
-    tags: ["High-rise buildings", "Luxury villas", "Shopping malls", "Condominiums"],
+    icon: HomeIcon,
+    title: "Architectural House Plans",
+    desc: "Customized architectural house plans tailored to your requirements, land conditions, lifestyle, and budget — from single-storey to modern luxury homes.",
+    tags: ["Single-storey", "Two-storey", "Luxury homes", "Compact designs"],
   },
   {
-    icon: Layers,
-    title: "Civil & Structural Engineering",
-    desc: "Comprehensive structural design, geotechnical analysis, and engineering ensuring maximum safety, durability, and code compliance.",
-    tags: ["Structural design", "Foundation works", "Geotechnical analysis", "Seismic assessment"],
+    icon: Box,
+    title: "3D Exterior & Interior Design",
+    desc: "Realistic 3D visualizations of your future property — exterior facade, interior spaces, materials, colours, and furniture arrangements — before construction begins.",
+    tags: ["Exterior design", "Interior design", "3D rendering", "Colour concepts"],
   },
   {
-    icon: Truck,
-    title: "Infrastructure & Road Works",
-    desc: "Expressways, bridges, urban roads, and drainage systems built to government and international standards across all provinces.",
-    tags: ["Expressways", "Bridge construction", "Drainage", "Urban roads"],
+    icon: FileText,
+    title: "Engineering Drawings",
+    desc: "Complete set of technical drawings including floor plans, elevation, section, structural, and construction detail drawings for your project.",
+    tags: ["Floor plans", "Elevations", "Sections", "Working drawings"],
   },
   {
-    icon: Wrench,
-    title: "Survey Works",
-    desc: "Precision land and topographic surveys, setting out, and GPS/total station measurements — delivering accurate spatial data for every stage of construction.",
-    tags: ["Land surveying", "Setting out", "Topographic surveys", "GPS/Total station"],
+    icon: Zap,
+    title: "Electrical & Plumbing Layouts",
+    desc: "Coordinated electrical and plumbing layout plans covering lighting, power outlets, water supply, drainage, and sanitary fixture locations.",
+    tags: ["Electrical layout", "Plumbing plan", "Circuit planning", "Drainage"],
+  },
+  {
+    icon: Columns3,
+    title: "Structural Drawings",
+    desc: "Technical structural documentation covering foundations, columns, beams, slabs, staircases, and roof structures for safe and efficient construction.",
+    tags: ["Foundation design", "Columns & beams", "Slabs", "Roof structure"],
+  },
+  {
+    icon: Calculator,
+    title: "BOQ & Detailed Estimates",
+    desc: "Bill of Quantities and detailed cost estimates to help you understand material quantities, construction costs, and plan your project budget accurately.",
+    tags: ["Material quantities", "Cost estimation", "Budget planning", "Work breakdown"],
+  },
+  {
+    icon: Banknote,
+    title: "Bank Loan Documentation",
+    desc: "Preparation of necessary technical documentation required for construction-related bank loan processes — house plans, estimates, BOQ, and supporting documents.",
+    tags: ["House plans", "Estimates", "BOQ", "Technical docs"],
+  },
+  {
+    icon: Stamp,
+    title: "Local Authority Approvals",
+    desc: "Preparation of drawings and documentation required for submission to the appropriate local authorities for construction approval.",
+    tags: ["Approval drawings", "Local authority", "Submission docs", "Compliance"],
+  },
+  {
+    icon: ClipboardList,
+    title: "Detailed Working Drawings",
+    desc: "Comprehensive working drawings providing construction teams with all information needed — layouts, details, staircases, doors, windows, and finishes.",
+    tags: ["Construction details", "Staircase drawings", "Door & window schedules", "Finishes"],
+  },
+  {
+    icon: Play,
+    title: "3D Walkthrough & Visualization",
+    desc: "Realistic 3D walkthrough videos allowing you to experience your proposed property — interior spaces, materials, lighting, and overall atmosphere — before building.",
+    tags: ["Walkthrough video", "Realistic rendering", "Materials preview", "Lighting concepts"],
   },
   {
     icon: Leaf,
-    title: "Green & Sustainable Building",
-    desc: "Eco-friendly construction meeting international green building standards including LEED certification and energy optimisation.",
-    tags: ["LEED certification", "Solar integration", "Rainwater harvesting", "Green roofing"],
-  },
-  {
-    icon: Hammer,
-    title: "Renovation & Retrofitting",
-    desc: "Upgrading existing structures to modern safety, seismic, and functional standards while preserving architectural character.",
-    tags: ["Seismic upgrades", "Interior renovation", "Historic restoration", "Structural retrofitting"],
+    title: "Sustainable Design Consulting",
+    desc: "Environmentally conscious design solutions incorporating natural lighting, natural ventilation, efficient space planning, and energy-conscious material selection.",
+    tags: ["Natural lighting", "Ventilation", "Efficient spaces", "Eco materials"],
   },
 ];
 
@@ -55,11 +85,11 @@ export function Services() {
             Our Core Services
           </motion.h2>
           <motion.p className="text-gray-500 max-w-xl mx-auto mt-4" style={{ lineHeight: 1.85, fontSize: "0.92rem" }} variants={fadeUp}>
-            Comprehensive construction and engineering solutions tailored to Sri Lanka's landscape, climate, and regulatory environment.
+            Comprehensive architectural planning, engineering design, and technical documentation services — supporting every stage of your residential construction project.
           </motion.p>
         </motion.div>
 
-        <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" variants={staggerContainer(0.1, 0.1)} initial="hidden" whileInView="show" viewport={viewportConfig}>
+        <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" variants={staggerContainer(0.1, 0.1)} initial="hidden" whileInView="show" viewport={viewportConfig}>
           {services.map((svc) => (
             <motion.div
               key={svc.title}

@@ -3,12 +3,12 @@ import { motion, useInView } from "motion/react";
 import { staggerContainer, fadeUp, viewportConfig } from "./animations";
 
 const stats = [
-  { value: 5, suffix: "+", label: "Projects Completed", sub: "Across all 9 provinces" },
-  { value: 1, prefix: "LKR ", suffix: "M+", label: "Total Project Value", sub: "Successfully delivered" },
-  { value: 98, suffix: "%", label: "On-Time Delivery", sub: "Industry-leading rate" },
-  { value: 12, suffix: "+", label: "Skilled Professionals", sub: "Certified team members" },
-  { value: 0, suffix: "", label: "Major Safety Incidents", sub: "1 consecutive years" },
-  { value: 2, suffix: "+", label: "Government Contracts", sub: "Ministry & RDA projects" },
+  { value: 5, suffix: "+", label: "Projects Completed", sub: "Residential designs delivered" },
+  { value: 3, suffix: "", label: "Expert Team Members", sub: "Engineering professionals" },
+  { value: 11, suffix: "", label: "Services Offered", sub: "End-to-end design solutions" },
+  { value: 8, suffix: "", label: "Step Project Process", sub: "Structured & transparent" },
+  { value: 3, suffix: "", label: "Design Packages", sub: "Basic, Standard & Premium" },
+  { value: 1, suffix: "+", label: "Year of Excellence", sub: "Est. 2026, Sri Lanka" },
 ];
 
 function Counter({ value, prefix = "", suffix = "" }: { value: number; prefix?: string; suffix?: string }) {
@@ -59,7 +59,7 @@ export function Stats() {
             <div className="h-px w-10" style={{ background: "#0d6b6a" }} />
           </motion.div>
           <motion.h2 className="text-white" style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 900, letterSpacing: "-0.02em" }} variants={fadeUp}>
-            Two Decades of Proven Performance
+            Committed to Quality at Every Stage
           </motion.h2>
         </motion.div>
 

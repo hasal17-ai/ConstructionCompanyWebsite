@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 const stats = [
   { value: "1+", label: "Years Experience" },
   { value: "5+", label: "Projects Done" },
-  { value: "12+", label: "Skilled Team" },
-  { value: "25+", label: "Districts Served" },
+  { value: "3", label: "Expert Team" },
+  { value: "8", label: "Step Process" },
 ];
 
 export function Hero() {
@@ -69,17 +69,17 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            BUILDING SRI LANKA'S{" "}
+            YOUR VISION.{" "}
             <motion.span
               style={{ color: "#0d9488" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.0, duration: 0.5 }}
             >
-              FUTURE
+              OUR EXPERTISE.
             </motion.span>
             <br />
-            ONE STRUCTURE AT A TIME
+            A BETTER FUTURE.
           </motion.h1>
         </div>
 
@@ -90,7 +90,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.65 }}
         >
-          Titan Engineering Pvt Ltd delivers world-class construction, civil engineering, and infrastructure solutions across Sri Lanka with 1+ years of proven excellence.
+          Titan Engineering is a professional engineering and construction consultancy delivering architectural planning, 3D design, technical documentation, and cost estimation for modern residential projects across Sri Lanka.
         </motion.p>
 
         {/* CTAs */}
