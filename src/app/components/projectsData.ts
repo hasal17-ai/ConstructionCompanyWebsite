@@ -5,8 +5,8 @@
 // Real hand-drawn architectural plan (user-provided). Used as a plan override.
 import realPlan from "../../imports/Professional_2D_architectural_floor_plan_202606210843__1_.jpeg";
 import zenith3D from "../../imports/Copilot_20260724_021406.png";
-import willow3D from "../../imports/Dramatic_architectural_3D_visualization_of_202606030723.jpeg";
-import willow2D from "../../imports/Professional_architectural_2D_floor_plan_202606030657.jpeg";
+import willow3D from "../../imports/Modern_single-story_house_floor___20261009134712.jpg";
+import willow2D from "../../imports/Modern_house_architectural_floor__20261009134608.jpg";
 import oasis3D from "../../imports/Ground_Floor_details__A_wide__202606211937.jpeg";
 import oasis2D from "../../imports/Ground_Floor_details_include_all_202606211937.jpeg";
 import forest3D from "../../imports/A_high-quality_3D_architectural_render__202606071736.jpeg";
