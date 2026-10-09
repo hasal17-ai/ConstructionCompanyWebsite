@@ -7,6 +7,8 @@ import realPlan from "../../imports/Professional_2D_architectural_floor_plan_202
 import zenith3D from "../../imports/Copilot_20260724_021406.png";
 import willow3D from "../../imports/Modern_single-story_house_floor___20261009134712.jpg";
 import willow2D from "../../imports/Modern_house_architectural_floor__20261009134608.jpg";
+import pine3D from "../../imports/Modern_house_floor_plan_visualiz__20261009172431.jpg";
+import pine2D from "../../imports/Architectural_floor_plan_of_house_20261009172202.jpg";
 import oasis3D from "../../imports/Ground_Floor_details__A_wide__202606211937.jpeg";
 import oasis2D from "../../imports/Ground_Floor_details_include_all_202606211937.jpeg";
 import forest3D from "../../imports/A_high-quality_3D_architectural_render__202606071736.jpeg";
@@ -116,8 +118,8 @@ export const projects: Project[] = [
     longDesc:
       "Pine Retreat is an affordable weekend cabin built from locally sourced timber. The open living-and-kitchen zone flows to a single cozy bedroom with an adjoining bath, making it ideal as a starter home or holiday getaway in the hills.",
     features: ["Timber construction", "Open living & kitchen", "One bedroom", "Passive insulation"],
-    image3D:
-      "https://images.unsplash.com/photo-1595521624992-48a59aef95e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1000",
+    image3D: pine3D,
+    plan2DImage: pine2D,
     rooms: cabinLayout,
   },
   {
