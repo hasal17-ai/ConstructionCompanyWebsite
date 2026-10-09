@@ -6,6 +6,8 @@ import {
 } from "lucide-react";
 import { fadeUp, fadeLeft, fadeRight, staggerContainer, cardVariant, viewportConfig } from "../components/animations";
 import logoImg from "../../imports/Red_Black_boxes_Logo_Design_Business_Identity_for_Real_Estate_House_Rent_Sale__2_.png";
+import heroImg from "../../imports/alexander-abero-OypnYfdiQgg-unsplash.jpg";
+import hasalImg from "../../imports/hasal.jpg";
 
 /* ─── data ────────────────────────────────────────────────────── */
 
@@ -85,7 +87,7 @@ const team = [
     name: "Hasal",
     role: "Technical Support",
     qual: "H.N.D. · Digital planning · Spatial & technical information",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+    image: hasalImg,
   },
 ];
 
@@ -113,7 +115,7 @@ export default function About() {
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: "480px" }}>
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920')" }}
+          style={{ backgroundImage: `url(${heroImg})` }}
           initial={{ scale: 1.06 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94] }}

@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
+import heroImg from "../../imports/scott-blake-1GW45VDkFI0-unsplash.jpg";
+import bankLoanImg from "../../imports/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg";
+import walkthroughImg from "../../imports/oleksii-tsaryuk-eaj4KTgQa8Y-unsplash.jpg";
+import sustainableImg from "../../imports/steven-council-SFtnLEadLxE-unsplash.jpg";
 import {
   HomeIcon, Box, FileText, Zap, Columns3, Calculator, Banknote, Stamp, ClipboardList, Play, Leaf,
   ChevronRight, ArrowRight, Phone, CheckCircle2,
@@ -121,7 +125,7 @@ const services = [
       "Estimates and BOQ included",
       "Organized and professionally presented",
     ],
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900",
+    image: bankLoanImg,
   },
   {
     id: "local-authority",
@@ -169,7 +173,7 @@ const services = [
       "Materials, finishes, and furniture shown",
       "Ideal for confident construction decisions",
     ],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900",
+    image: walkthroughImg,
   },
   {
     id: "sustainable-design",
@@ -185,7 +189,7 @@ const services = [
       "Efficient space planning approach",
       "Landscape integration and cost reduction",
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900",
+    image: sustainableImg,
   },
 ];
 
@@ -296,7 +300,7 @@ export default function Services() {
       <section className="relative flex items-end overflow-hidden" style={{ minHeight: "480px" }}>
         <motion.div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1590664863685-a99ef05e9f61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920')" }}
+          style={{ backgroundImage: `url(${heroImg})` }}
           initial={{ scale: 1.06 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94] }}

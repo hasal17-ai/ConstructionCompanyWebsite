@@ -109,7 +109,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#0d6b6a" }} />
-                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>titanengineering07@gmail.com<br />projects@titanengineering.lk</span>
+                <span style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>titanengineering07@gmail.com<br />info@titanengineering.lk</span>
               </li>
             </ul>
           </motion.div>

@@ -9,8 +9,6 @@ const links = [
   { label: "About", href: "/about", route: "/about" },
   { label: "Services", href: "/services", route: "/services" },
   { label: "Projects", href: "/projects", route: "/projects" },
-  { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -98,18 +96,13 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.07, duration: 0.45 }}
                 whileHover={{ y: -2, color: "#0d9488" }}
-              >
-                <span className={isActive ? "text-[#0d9488]" : "text-gray-300 hover:text-[#0d9488]"}>
-                  {l.label.toUpperCase()}
-                </span>
-                {isActive && (
+              ><span className={isActive ? "text-[#0d9488]" : "text-gray-300 hover:text-[#0d9488]"}>{l.label.toUpperCase()}</span>{isActive && (
                   <motion.div
                     className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
                     style={{ background: "#0d6b6a" }}
                     layoutId="nav-underline"
                   />
-                )}
-              </motion.button>
+                )}</motion.button>
             );
           })}
           <motion.button
